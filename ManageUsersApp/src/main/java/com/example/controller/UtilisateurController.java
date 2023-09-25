@@ -41,7 +41,7 @@ public class UtilisateurController {
 	}
 	
 	@PutMapping(value = "/update/{id}")
-	public String updateUser(@PathVariable("id") int userId,Utilisateur newUser) throws Exception {
+	public String updateUser(@PathVariable("id") int userId,@RequestBody Utilisateur newUser) throws Exception {
 		return userService.updateUser(userId,newUser);
 
 	}
